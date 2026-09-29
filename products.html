@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="आमची उत्पादने - श्रद्धा किराणा आणि जनरल स्टोअर्स, तेजेवाडी, जुन्नर. धान्य, कडधान्ये, तेल, तूप, मसाले, दुग्धजन्य पदार्थ व इतर किराणा माल." />
+  <title>आमची उत्पादने | Products — श्रद्धा किराणा आणि जनरल स्टोअर्स</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== FIXED NAVBAR ===== -->
+  <header class="navbar fixed-navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon brand-logo-img">
+          <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="46" width="46" style="object-fit:contain;border-radius:6px;">
+        </span>
+        <span class="brand-text">
+          <span class="mr">श्रद्धा किराणा</span>
+          <span class="en hidden">Shraddha Kirana</span>
+        </span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" onclick="closeMenu()">
+            <span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span>
+          </a></li>
+          <li><a href="products.html" class="active-page" onclick="closeMenu()">
+            <span class="mr">उत्पादने</span><span class="en hidden">Products</span>
+          </a></li>
+          <li><a href="gallery.html" onclick="closeMenu()">
+            <span class="mr">गॅलरी</span><span class="en hidden">Gallery</span>
+          </a></li>
+          <li><a href="about.html" onclick="closeMenu()">
+            <span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span>
+          </a></li>
+          <li><a href="contact.html" onclick="closeMenu()" class="nav-cta">
+            <span class="mr">संपर्क</span><span class="en hidden">Contact</span>
+          </a></li>
+        </ul>
+
+        <!-- Language Switcher in Navbar -->
+        <div class="nav-lang">
+          <button class="lang-btn active" id="btn-mr" onclick="setLang('mr')">मराठी</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-banner">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span></a>
+        <span>&rsaquo;</span>
+        <span><span class="mr">आमची उत्पादने</span><span class="en hidden">Our Products</span></span>
+      </nav>
+      <div class="page-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+        <span class="mr">होलसेल आणि किरकोळ दर</span>
+        <span class="en hidden">Wholesale &amp; Retail Available</span>
+      </div>
+      <h1 class="page-banner-title">
+        <span class="mr">आमची दर्जेदार उत्पादने</span>
+        <span class="en hidden">Our Quality Product Catalogue</span>
+      </h1>
+      <p class="page-banner-desc">
+        <span class="mr">उत्तम दर्जाचा किराणा व भुसार माल, कडधान्ये, तेल, तूप, मसाले, दुग्धजन्य पदार्थ आणि घरगुती दैनंदिन वस्तू — सर्व एकाच छताखाली!</span>
+        <span class="en hidden">Finest quality groceries, grains, pulses, cooking oils, pure ghee, spices, dairy products, and daily essentials — all under one roof!</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS CATALOGUE SECTION ===== -->
+  <main class="section products-section">
+    <div class="container">
+
+      <!-- Category Filter Pills -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" data-target="all" onclick="filterProducts('all', this)">
+          <span class="mr">सर्व उत्पादने</span>
+          <span class="en hidden">All Categories</span>
+        </button>
+        <button class="filter-btn" data-target="grains" onclick="filterProducts('grains', this)">
+          <span class="mr">धान्य व कडधान्ये</span>
+          <span class="en hidden">Grains &amp; Pulses</span>
+        </button>
+        <button class="filter-btn" data-target="oils" onclick="filterProducts('oils', this)">
+          <span class="mr">तेल आणि तूप</span>
+          <span class="en hidden">Oils &amp; Ghee</span>
+        </button>
+        <button class="filter-btn" data-target="spices" onclick="filterProducts('spices', this)">
+          <span class="mr">मसाले व ड्रायफ्रूट्स</span>
+          <span class="en hidden">Spices &amp; Dry Fruits</span>
+        </button>
+        <button class="filter-btn" data-target="breakfast" onclick="filterProducts('breakfast', this)">
+          <span class="mr">चहा, कॉफी व नाश्ता</span>
+          <span class="en hidden">Tea &amp; Breakfast</span>
+        </button>
+        <button class="filter-btn" data-target="dairy" onclick="filterProducts('dairy', this)">
+          <span class="mr">दूध व दुग्धजन्य</span>
+          <span class="en hidden">Dairy Products</span>
+        </button>
+        <button class="filter-btn" data-target="beverages" onclick="filterProducts('beverages', this)">
+          <span class="mr">थंड पेये</span>
+          <span class="en hidden">Beverages</span>
+        </button>
+        <button class="filter-btn" data-target="cleaning" onclick="filterProducts('cleaning', this)">
+          <span class="mr">स्वच्छता साहित्य</span>
+          <span class="en hidden">Cleaning Supplies</span>
+        </button>
+      </div>
+
+      <!-- Category 1: Grains & Pulses -->
+      <div class="product-category-group" data-cat="grains" style="margin-bottom: 50px;">
+        <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+          <h2 style="font-size: 1.6rem; color: var(--green-deep);">
+            <span class="mr">धान्य, कडधान्ये आणि भुसार माल</span>
+            <span class="en hidden">Grains, Pulses &amp; Cereals</span>
+          </h2>
+          <p class="section-sub" style="text-align: left; margin: 4px 0 0;">
+            <span class="mr">गावरान मटकी, हुळगे, तांदूळ, गहू, डाळी आणि सर्व प्रकारचा भुसार माल किरकोळ व होलसेल कट्ट्यांमध्ये उपलब्ध</span>
+            <span class="en hidden">Authentic farm-fresh pulses, grains, rice, wheat, and bulk sacks available for retail and wholesale</span>
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(4)" title="मोठा फोटो पहा">
+              <img src="images/grains&amp;pulses.png" alt="धान्य व कडधान्ये" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">होलसेल व किरकोळ</span>
+                <span class="en hidden">Wholesale &amp; Retail</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">कडधान्ये व डाळी</span>
+                  <span class="en hidden">Legumes &amp; Pulses</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">मांजे हूळगे आणि अस्सल गावरान मटकी</span><span class="en hidden">Manje Hulge &amp; Gavran Matki</span></li>
+                <li><span class="mr">तूर डाळ, मूग डाळ, चणा डाळ, उडीद डाळ</span><span class="en hidden">Toor Dal, Moong Dal, Chana &amp; Urad Dal</span></li>
+                <li><span class="mr">हिरवे मूग, चवळी, मसूर, वाटाणे</span><span class="en hidden">Green Moong, Chawli, Masoor, Peas</span></li>
+                <li><span class="mr">काबुली चणा, देशी हरभरा</span><span class="en hidden">Kabuli Chana &amp; Brown Chana</span></li>
+              </ul>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light);">
+                <a href="https://wa.me/919860562222?text=मी%20कडधान्ये%20व%20डाळींच्या%20दरांबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 9px 18px; font-size: 0.85rem; width: 100%; justify-content: center;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span class="mr">दरासाठी WhatsApp करा</span>
+                  <span class="en hidden">Inquire on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(4)" title="मोठा फोटो पहा">
+              <img src="images/grains&amp;pulses.png" alt="तांदूळ व अन्नधान्य" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">मोठे कट्टे उपलब्ध</span>
+                <span class="en hidden">Bulk Sacks</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">तांदूळ, गहू व इतर धान्ये</span>
+                  <span class="en hidden">Rice, Wheat &amp; Cereals</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">इंद्रायणी, बासमती, कोलम व तुकडा तांदूळ</span><span class="en hidden">Indrayani, Basmati, Kolam &amp; Wada Rice</span></li>
+                <li><span class="mr">लोकवन आणि सिहोर गहू (निवडलेला)</span><span class="en hidden">Lokwan &amp; Sihor Wheat (Sorted)</span></li>
+                <li><span class="mr">गावरान ज्वारी आणि बाजरी</span><span class="en hidden">Gavran Jowar &amp; Fresh Bajra</span></li>
+                <li><span class="mr">पोहे, साबुदाणा, वरई व भगर</span><span class="en hidden">Poha, Sabudana, Varai &amp; Bhagar</span></li>
+              </ul>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light);">
+                <a href="https://wa.me/919860562222?text=मी%20धान्य%20व%20कट्ट्यांच्या%20दरांबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 9px 18px; font-size: 0.85rem; width: 100%; justify-content: center;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span class="mr">दरासाठी WhatsApp करा</span>
+                  <span class="en hidden">Inquire on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Oils & Ghee -->
+      <div class="product-category-group" data-cat="oils" style="margin-bottom: 50px;">
+        <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+          <h2 style="font-size: 1.6rem; color: var(--green-deep);">
+            <span class="mr">खाद्यतेल आणि अस्सल गावठी तूप</span>
+            <span class="en hidden">Edible Cooking Oils &amp; Pure Desi Ghee</span>
+          </h2>
+          <p class="section-sub" style="text-align: left; margin: 4px 0 0;">
+            <span class="mr">सोयाबीन, शेंगदाणा, सूर्यफूल तेल १ लिटर पाऊच, ५ लिटर व १५ लिटर कॅन तसेच शुद्ध गावठी गाय-म्हशीचे तूप</span>
+            <span class="en hidden">Soybean, groundnut, sunflower oils in 1L pouches, 5L &amp; 15L cans, plus pure country desi ghee</span>
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(5)" title="मोठा फोटो पहा">
+              <img src="images/CookingOils&amp;Ghee.png" alt="खाद्यतेल आणि तूप" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">कॅन व पाऊच उपलब्ध</span>
+                <span class="en hidden">Cans &amp; Pouches</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">विविध खाद्यतेल प्रकार</span>
+                  <span class="en hidden">Edible Cooking Oils</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">सोयाबीन तेल (१ लिटर व १५ लिटर कॅन)</span><span class="en hidden">Soybean Oil (1L Pouch &amp; 15L Can)</span></li>
+                <li><span class="mr">अस्सल शेंगदाणा तेल (घाणीचे व रिफाइंड)</span><span class="en hidden">Pure Groundnut Oil (Filtered &amp; Refined)</span></li>
+                <li><span class="mr">सूर्यफूल तेल आणि मोहरी तेल</span><span class="en hidden">Sunflower Oil &amp; Mustard Oil</span></li>
+                <li><span class="mr">पामोलिन आणि इतर खाद्यतेल</span><span class="en hidden">Palmolein &amp; Assorted Cooking Oils</span></li>
+              </ul>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light);">
+                <a href="https://wa.me/919860562222?text=मी%20तेलाच्या%20कॅन%20व%20पाऊचच्या%20दरांबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 9px 18px; font-size: 0.85rem; width: 100%; justify-content: center;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span class="mr">दरासाठी WhatsApp करा</span>
+                  <span class="en hidden">Inquire on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(5)" title="मोठा फोटो पहा">
+              <img src="images/CookingOils&amp;Ghee.png" alt="शुद्ध गावठी तूप" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">१००% शुद्ध</span>
+                <span class="en hidden">100% Pure</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">शुद्ध गावठी तूप व वनस्पती तूप</span>
+                  <span class="en hidden">Pure Desi Ghee &amp; Vanaspati</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">दर्जेदार अस्सल गायीचे शुद्ध तूप</span><span class="en hidden">Pure Country Cow Desi Ghee</span></li>
+                <li><span class="mr">म्हशीचे रवाळ आणि सुगंधी तूप</span><span class="en hidden">Aromatic Buffalo Pure Ghee</span></li>
+                <li><span class="mr">घरगुती सण व समारंभासाठी योग्य</span><span class="en hidden">Ideal for festivals &amp; ceremonies</span></li>
+                <li><span class="mr">विविध ब्रँड्सचे वनस्पती तूप</span><span class="en hidden">Popular branded Vanaspati Ghee</span></li>
+              </ul>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light);">
+                <a href="https://wa.me/919860562222?text=मी%20शुद्ध%20तूपाच्या%20दरांबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 9px 18px; font-size: 0.85rem; width: 100%; justify-content: center;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span class="mr">दरासाठी WhatsApp करा</span>
+                  <span class="en hidden">Inquire on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Spices, Dry Fruits & Masalas -->
+      <div class="product-category-group" data-cat="spices" style="margin-bottom: 50px;">
+        <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+          <h2 style="font-size: 1.6rem; color: var(--green-deep);">
+            <span class="mr">मसाले, ड्रायफ्रूट्स आणि गृहपयोगी जिन्नस</span>
+            <span class="en hidden">Spices, Dry Fruits &amp; Seasonings</span>
+          </h2>
+          <p class="section-sub" style="text-align: left; margin: 4px 0 0;">
+            <span class="mr">ताजे खडे मसाले, घरगुती गरम मसाले, हळद, तिखट, काजू, बदाम, मनुके आणि पौष्टिक ड्रायफ्रूट्स</span>
+            <span class="en hidden">Fresh whole spices, home-style garam masala blends, turmeric, chilli, almonds, cashews and dry fruits</span>
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(6)" title="मोठा फोटो पहा">
+              <img src="images/Spices &amp; Dry Fruits.png" alt="मसाले व ड्रायफ्रूट्स" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">सुगंधी मसाले</span>
+                <span class="en hidden">Aromatic Spices</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">मसाले आणि ड्रायफ्रूट्स</span>
+                  <span class="en hidden">Spices &amp; Premium Nuts</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">हळद, बेडगी मिरची पावडर, कांदा-लसूण मसाला</span><span class="en hidden">Turmeric, Bedgi Chilli, Kanda-Lasun Masala</span></li>
+                <li><span class="mr">घरगुती गरम मसाला, धने-जिरे पावडर</span><span class="en hidden">Garam Masala, Dhana-Jeera Powder</span></li>
+                <li><span class="mr">लवंग, दालचिनी, काळी मिरी, वेलची, चक्रीफूल</span><span class="en hidden">Cloves, Cinnamon, Black Pepper, Cardamom</span></li>
+                <li><span class="mr">काजू, बदाम, मनुके, पिस्ता, अक्रोड</span><span class="en hidden">Cashews, Almonds, Raisins, Pistachios</span></li>
+              </ul>
+              <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-light);">
+                <a href="https://wa.me/919860562222?text=मी%20मसाले%20व%20ड्रायफ्रूट्सबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 9px 18px; font-size: 0.85rem; width: 100%; justify-content: center;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  <span class="mr">दरासाठी WhatsApp करा</span>
+                  <span class="en hidden">Inquire on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Tea, Breakfast & Dairy -->
+      <div class="product-category-group" data-cat="breakfast" style="margin-bottom: 50px;">
+        <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+          <h2 style="font-size: 1.6rem; color: var(--green-deep);">
+            <span class="mr">चहा, कॉफी, नाश्ता आणि दुग्धजन्य पदार्थ</span>
+            <span class="en hidden">Tea, Coffee, Breakfast &amp; Dairy</span>
+          </h2>
+          <p class="section-sub" style="text-align: left; margin: 4px 0 0;">
+            <span class="mr">रोजच्या सकाळचा चहा, नाश्त्याची उत्पादने, ताजे दूध, मऊ पनीर व श्रीखंड</span>
+            <span class="en hidden">Morning essentials, branded tea and coffee, bakery biscuits, fresh paneer and dairy delicacies</span>
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(7)" title="मोठा फोटो पहा">
+              <img src="images/Tea, Coffee &amp; Breakfas.png" alt="चहा, कॉफी व नाश्ता" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">प्रीमियम ब्रँड्स</span>
+                <span class="en hidden">Top Brands</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">चहा, कॉफी आणि नाश्ता</span>
+                  <span class="en hidden">Tea, Coffee &amp; Breakfast</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">प्रीमियम पत्ती चहा, स्पेशल चहा पावडर</span><span class="en hidden">Premium Leaf Tea &amp; Strong CTC Tea</span></li>
+                <li><span class="mr">नेस्कॅफे व ब्रू इन्स्टंट कॉफी</span><span class="en hidden">Nescafe &amp; Bru Instant Coffee</span></li>
+                <li><span class="mr">बिस्किटे, खारी, टोस्ट आणि बेकरी आयटम्स</span><span class="en hidden">Biscuits, Khari, Toast &amp; Rusk</span></li>
+                <li><span class="mr">पोहे, रवा, शेवया, कॉर्नफ्लेक्स</span><span class="en hidden">Poha, Rava, Vermicelli &amp; Cornflakes</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(8)" title="मोठा फोटो पहा">
+              <img src="images/Dairy &amp; Milk.png" alt="दूध व दुग्धजन्य पदार्थ" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">दररोज ताजे</span>
+                <span class="en hidden">Fresh Daily</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v4H8z"/><path d="M6 6h12l2 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10l2-4z"/><line x1="4" y1="14" x2="20" y2="14"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">दूध आणि दुग्धजन्य पदार्थ</span>
+                  <span class="en hidden">Milk &amp; Dairy Products</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">ताजे पाश्चराईज्ड दूध (पिशवी)</span><span class="en hidden">Fresh Pasteurized Milk (Pouches)</span></li>
+                <li><span class="mr">मऊ आणि ताजे मलाई पनीर</span><span class="en hidden">Soft &amp; Fresh Malai Paneer</span></li>
+                <li><span class="mr">श्रीखंड, आम्रखंड आणि बासुंदी</span><span class="en hidden">Shrikhand, Amrakhand &amp; Basundi</span></li>
+                <li><span class="mr">आईस्क्रीम आणि दही-ताक</span><span class="en hidden">Ice Cream, Curd &amp; Buttermilk</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 5: Beverages & Cleaning -->
+      <div class="product-category-group" data-cat="cleaning" style="margin-bottom: 50px;">
+        <div class="section-header" style="margin-bottom: 30px; text-align: left;">
+          <h2 style="font-size: 1.6rem; color: var(--green-deep);">
+            <span class="mr">थंड पेये आणि घरगुती स्वच्छता साहित्य</span>
+            <span class="en hidden">Beverages, General Goods &amp; Cleaning</span>
+          </h2>
+          <p class="section-sub" style="text-align: left; margin: 4px 0 0;">
+            <span class="mr">चिल्ड कोल्ड ड्रिंक्स, मिनरल वॉटर आणि कपडे-भांडी-फ्लोअर स्वच्छतेचे नामांकित ब्रँड्स</span>
+            <span class="en hidden">Chilled soft drinks, mineral water, and trusted brands for laundry, dishwashing and floor care</span>
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(9)" title="मोठा फोटो पहा">
+              <img src="images/Cold Drinks &amp; Beverages.png" alt="थंड पेये" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">चिल्ड उपलब्ध</span>
+                <span class="en hidden">Always Chilled</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14l-2 18H7L5 2z"/><line x1="4" y1="6" x2="20" y2="6"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">थंड पेये व दैनंदिन वस्तू</span>
+                  <span class="en hidden">Cold Beverages &amp; Daily Needs</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">सर्व नामांकित ब्रँड्सचे कोल्ड ड्रिंक्स</span><span class="en hidden">Thums Up, Sprite, Coca-Cola &amp; Juices</span></li>
+                <li><span class="mr">सीलपॅक मिनरल वॉटर बाटल्या</span><span class="en hidden">Packaged Mineral Drinking Water</span></li>
+                <li><span class="mr">एनर्जी ड्रिंक्स आणि फ्रूट ज्यूस</span><span class="en hidden">Energy Drinks &amp; Tetrapack Juices</span></li>
+                <li><span class="mr">रोजच्या उपयोगाच्या जनरल स्टोअर वस्तू</span><span class="en hidden">General household stationery and goods</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper" onclick="openProductLightbox(10)" title="मोठा फोटो पहा">
+              <img src="images/Home Cleaning &amp; Hygiene.png" alt="स्वच्छता साहित्य" class="product-card-img" loading="lazy" />
+              <span class="product-badge">
+                <span class="mr">स्वच्छता साहित्य</span>
+                <span class="en hidden">Cleaning Goods</span>
+              </span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-card-header">
+                <div class="product-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <h3>
+                  <span class="mr">घरगुती स्वच्छता साहित्य</span>
+                  <span class="en hidden">Home Cleaning &amp; Hygiene</span>
+                </h3>
+              </div>
+              <ul>
+                <li><span class="mr">कपडे धुण्याचे साबण, बार व डिटर्जंट पावडर</span><span class="en hidden">Washing Soaps, Detergent Powders &amp; Liquids</span></li>
+                <li><span class="mr">भांडी घासण्याचे साबण व लिक्विड जेल</span><span class="en hidden">Dishwashing Bars &amp; Liquid Gels</span></li>
+                <li><span class="mr">फ्लोअर व टॉयलेट क्लिनर्स (हार्पिक, लायझोल)</span><span class="en hidden">Floor &amp; Toilet Cleaners (Harpic, Lizol)</span></li>
+                <li><span class="mr">झाडू, वायपर, स्क्रबर व इतर साहित्य</span><span class="en hidden">Brooms, Wipers, Scrubbers &amp; Mops</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wholesale Callout Banner -->
+      <div class="wholesale-callout">
+        <div class="wholesale-callout-text">
+          <h3>
+            <span class="mr">होलसेल खरेदी व घरगुती समारंभाच्या ऑर्डर्स</span>
+            <span class="en hidden">Wholesale &amp; Bulk Event Orders</span>
+          </h3>
+          <p>
+            <span class="mr">लग्नकार्य, वाढदिवस, मेस, कॅटरिंग किंवा घरगुती साठ्यासाठी लागणारा सर्व किराणा व भुसार माल वाजवी होलसेल दरात एकाच ठिकाणी उपलब्ध आहे. अधिक माहिती व आगाऊ नोंदणीसाठी त्वरित संपर्क करा.</span>
+            <span class="en hidden">Bulk provisions for weddings, catering, mess facilities, or monthly family stock available at attractive wholesale prices. Contact us directly for bulk discounts and delivery arrangements.</span>
+          </p>
+        </div>
+        <div class="wholesale-callout-actions">
+          <a href="tel:+919860562222" class="btn-cta" style="padding: 12px 24px; font-size: 0.92rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+            <span class="mr">कॉल करा</span>
+            <span class="en hidden">Call Us</span>
+          </a>
+          <a href="https://wa.me/919860562222?text=मी%20होलसेल%20किराणा%20खरेदीबद्दल%20चौकशी%20करू%20इच्छितो" target="_blank" rel="noopener" class="btn-hero-wa" style="padding: 12px 24px; font-size: 0.92rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== PRODUCT LIGHTBOX MODAL ===== -->
+  <div class="product-lightbox" id="productLightbox" onclick="closeProductLightbox(event)">
+    <button class="lb-close" onclick="closeProductLightbox(event)" aria-label="Close Lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lb-prev" onclick="productLbNav(event,-1)" aria-label="Previous">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img src="" alt="" id="productLbImg" class="lb-img" onclick="event.stopPropagation()" />
+    <button class="lb-next" onclick="productLbNav(event,1)" aria-label="Next">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <p class="lb-caption" id="productLbCaption" onclick="event.stopPropagation()"></p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Col 1: Store Brand Info -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon footer-logo-img">
+              <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="64" width="64" style="object-fit:contain;border-radius:8px;">
+            </span>
+            <h3>
+              <span class="mr">श्रद्धा किराणा</span>
+              <span class="en hidden">Shraddha Kirana</span>
+            </h3>
+          </div>
+          <p class="footer-desc">
+            <span class="mr">आपल्या विश्वासाचं आणि रोजच्या गरजेच्या वस्तू एकाच छताखाली मिळण्याचे जुन्नर तालुक्यातील हक्काचे किराणा दुकान!</span>
+            <span class="en hidden">Your trusted destination for everyday groceries and bulk grain essentials in Junnar!</span>
+          </p>
+          <div class="footer-owner-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>
+              <span class="mr">संचालक: रामकृष्ण धोमसे</span>
+              <span class="en hidden">Proprietor: Ramkrishna Dhomse</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">जलद दुवे</span>
+            <span class="en hidden">Quick Links</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="index.html"><span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span></a></li>
+            <li><a href="products.html"><span class="mr">आमची उत्पादने</span><span class="en hidden">Products</span></a></li>
+            <li><a href="gallery.html"><span class="mr">दुकान फोटो गॅलरी</span><span class="en hidden">Photo Gallery</span></a></li>
+            <li><a href="about.html"><span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span></a></li>
+            <li><a href="contact.html"><span class="mr">संपर्क व पत्ता</span><span class="en hidden">Contact Store</span></a></li>
+            <li><a href="terms.html"><span class="mr">अटी व शर्ती</span><span class="en hidden">Terms &amp; Conditions</span></a></li>
+            <li><a href="privacy.html"><span class="mr">गोपनीयता धोरण</span><span class="en hidden">Privacy Policy</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products Highlight -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">उत्पादन विभाग</span>
+            <span class="en hidden">Categories</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="products.html?cat=grains"><span class="mr">धान्य आणि कडधान्ये</span><span class="en hidden">Grains &amp; Pulses</span></a></li>
+            <li><a href="products.html?cat=oils"><span class="mr">खाद्यतेल आणि गावठी तूप</span><span class="en hidden">Oils &amp; Pure Ghee</span></a></li>
+            <li><a href="products.html?cat=spices"><span class="mr">मसाले आणि ड्रायफ्रूट्स</span><span class="en hidden">Spices &amp; Dry Fruits</span></a></li>
+            <li><a href="products.html?cat=breakfast"><span class="mr">चहा, कॉफी व नाश्ता</span><span class="en hidden">Tea &amp; Breakfast</span></a></li>
+            <li><a href="products.html?cat=dairy"><span class="mr">दूध व दुग्धजन्य पदार्थ</span><span class="en hidden">Milk &amp; Dairy</span></a></li>
+            <li><a href="products.html?cat=cleaning"><span class="mr">स्वच्छता साहित्य</span><span class="en hidden">Cleaning Products</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Contact & Timing -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">संपर्क व वेळ</span>
+            <span class="en hidden">Contact &amp; Hours</span>
+          </h4>
+          <ul class="footer-contact-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919860562222">+91 98605 62222</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:dhomseramkrishna@gmail.com">dhomseramkrishna@gmail.com</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7" target="_blank" rel="noopener" title="Google Maps Store Location">
+                <span class="mr">तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+                <span class="en hidden">Tejewadi, Junnar, Pune</span>
+              </a>
+            </li>
+            <li class="footer-timing-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>
+                <span class="mr">सकाळी ७:०० ते रात्री ९:३० (दररोज)</span>
+                <span class="en hidden">7:00 AM - 9:30 PM (Daily)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          <span class="mr">&copy; 2026 श्रद्धा किराणा आणि जनरल स्टोअर्स. सर्व हक्क राखीव.</span>
+          <span class="en hidden">&copy; 2026 Shraddha Kirana &amp; General Stores. All rights reserved.</span>
+        </p>
+        <span class="footer-bottom-divider">|</span>
+        <p class="footer-developer">
+          <span class="mr">डिझाइन व विकसित:&nbsp;</span>
+          <span class="en hidden">Designed &amp; Developed by&nbsp;</span>
+          <a href="https://textorasms.com" target="_blank" rel="noopener" class="footer-dev-logo-link" title="Textora Technologies">
+            <img src="images/textora-logo-white.png" alt="Textora Technologies" class="footer-dev-logo" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/919860562222" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

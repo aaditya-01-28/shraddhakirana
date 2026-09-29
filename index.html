@@ -1,0 +1,1083 @@
+﻿<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="श्रद्धा किराणा आणि जनरल स्टोअर्स - Shraddha Kirana & General Stores, Tejewadi, Junnar, Pune. Wholesale & Retail grocery store." />
+  <meta name="keywords" content="shraddha kirana, grocery store, tejewadi, junnar, pune, maharashtra, किराणा, जनरल स्टोअर्स" />
+  <title>श्रद्धा किराणा आणि जनरल स्टोअर्स | Shraddha Kirana &amp; General Stores</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== FIXED NAVBAR ===== -->
+  <header class="navbar fixed-navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon brand-logo-img">
+          <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="46" width="46" style="object-fit:contain;border-radius:6px;">
+        </span>
+        <span class="brand-text">
+          <span class="mr">श्रद्धा किराणा</span>
+          <span class="en hidden">Shraddha Kirana</span>
+        </span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active-page" onclick="closeMenu()">
+            <span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span>
+          </a></li>
+          <li><a href="products.html" onclick="closeMenu()">
+            <span class="mr">उत्पादने</span><span class="en hidden">Products</span>
+          </a></li>
+          <li><a href="gallery.html" onclick="closeMenu()">
+            <span class="mr">गॅलरी</span><span class="en hidden">Gallery</span>
+          </a></li>
+          <li><a href="about.html" onclick="closeMenu()">
+            <span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span>
+          </a></li>
+          <li><a href="contact.html" onclick="closeMenu()" class="nav-cta">
+            <span class="mr">संपर्क</span><span class="en hidden">Contact</span>
+          </a></li>
+        </ul>
+
+        <!-- Language Switcher in Navbar -->
+        <div class="nav-lang">
+          <button class="lang-btn active" id="btn-mr" onclick="setLang('mr')">मराठी</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section class="hero-carousel-section" id="home">
+    <div class="hero-carousel" id="heroCarousel">
+
+      <!-- Slides -->
+      <div class="hero-slide active">
+        <div class="slide-bg" style="background-image: url('images/shop1.jpg');"></div>
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('images/shop2.jpg');"></div>
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('images/shop3.jpg');"></div>
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('images/shop4.jpg');"></div>
+        <div class="slide-overlay"></div>
+      </div>
+
+      <!-- Static Hero Content Overlay -->
+      <div class="hero-content-wrapper container">
+        <div class="hero-content">
+          <div class="hero-category-tag">
+            <span class="mr">किराणा व भुसार मालाचे होलसेल आणि किरकोळ विक्रेते</span>
+            <span class="en hidden">Wholesale &amp; Retail Grocery Store</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्स</span>
+            <span class="en hidden">Shraddha Kirana &amp; General Stores</span>
+          </h1>
+          <p class="hero-tagline">
+            <span class="mr">आपल्या विश्वासाचं आणि रोजच्या गरजेच्या वस्तू एकाच छताखाली मिळण्याचे ठिकाण!</span>
+            <span class="en hidden">Your trusted destination for all everyday grocery essentials under one roof!</span>
+          </p>
+          <p class="hero-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="mr">तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+            <span class="en hidden">Tejewadi, Taluka Junnar, Dist. Pune</span>
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="mr">उत्तम दर्जाचा माल</span>
+              <span class="en hidden">Premium Quality</span>
+            </span>
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="mr">योग्य व वाजवी दर</span>
+              <span class="en hidden">Fair Prices</span>
+            </span>
+            <span class="badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="mr">विश्वासू सेवा</span>
+              <span class="en hidden">Trusted Service</span>
+            </span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-cta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+              <span class="mr">संपर्क करा</span>
+              <span class="en hidden">Contact Store</span>
+            </a>
+            <a href="https://wa.me/919860562222" target="_blank" rel="noopener" class="btn-hero-wa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Buttons -->
+      <button class="hero-nav-btn hero-prev" onclick="heroNav(-1)" aria-label="Previous Slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="hero-nav-btn hero-next" onclick="heroNav(1)" aria-label="Next Slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Carousel Indicators -->
+      <div class="hero-indicators">
+        <button class="hero-dot active" onclick="setHeroSlide(0)" aria-label="Slide 1"></button>
+        <button class="hero-dot" onclick="setHeroSlide(1)" aria-label="Slide 2"></button>
+        <button class="hero-dot" onclick="setHeroSlide(2)" aria-label="Slide 3"></button>
+        <button class="hero-dot" onclick="setHeroSlide(3)" aria-label="Slide 4"></button>
+      </div>
+
+      <!-- Slide Caption Tag -->
+      <div class="hero-caption" id="heroCaption">
+        <span class="mr">दुकान मुख्य प्रवेशद्वार</span>
+        <span class="en hidden">Store Main Entrance</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <span class="mr">खासियत</span>
+          <span class="en hidden">Why Us</span>
+        </span>
+        <h2>
+          <span class="mr">आमचे वैशिष्ट्य</span>
+          <span class="en hidden">Our Highlights</span>
+        </h2>
+        <p class="section-sub">
+          <span class="mr">विश्वासू सेवा आणि दर्जेदार उत्पादनांची हमी</span>
+          <span class="en hidden">Guaranteed quality, fair pricing and customer satisfaction</span>
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>
+            <span class="mr">उत्तम दर्जाचा माल</span>
+            <span class="en hidden">Premium Quality</span>
+          </h3>
+          <p>
+            <span class="mr">आम्ही केवळ सर्वोत्तम दर्जाचा आणि निवडक किराणा माल विक्री करतो.</span>
+            <span class="en hidden">We stock and supply only the finest, carefully selected grocery products.</span>
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <h3>
+            <span class="mr">योग्य आणि वाजवी दर</span>
+            <span class="en hidden">Fair &amp; Affordable Rates</span>
+          </h3>
+          <p>
+            <span class="mr">होलसेल आणि किरकोळ दोन्ही विक्रीत अत्यंत स्पर्धात्मक आणि वाजवी दर.</span>
+            <span class="en hidden">Highly competitive wholesale and retail rates directly benefiting you.</span>
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>
+            <span class="mr">विश्वासू सेवा</span>
+            <span class="en hidden">Trusted Service</span>
+          </h3>
+          <p>
+            <span class="mr">ग्राहकांचा विश्वास हीच आमची खरी कमाई आहे. प्रामाणिक व्यवहार ही आमची ओळख.</span>
+            <span class="en hidden">Customer trust is our greatest asset. Honest dealing is our trademark.</span>
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>
+            <span class="mr">सर्व वस्तू एकाच छताखाली</span>
+            <span class="en hidden">Everything Under One Roof</span>
+          </h3>
+          <p>
+            <span class="mr">धान्य, डाळी, मसाले, तेलापासून दैनंदिन गरजेच्या सर्व वस्तू एकाच ठिकाणी उपलब्ध.</span>
+            <span class="en hidden">From grains, pulses, spices to household daily essentials in one location.</span>
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.55" y2="4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>
+            <span class="mr">होलसेल व किरकोळ विक्री</span>
+            <span class="en hidden">Wholesale &amp; Retail</span>
+          </h3>
+          <p>
+            <span class="mr">मोठ्या प्रमाणातील भुसार मालासाठी व घरगुती गरजांसाठी विशेष सुविधा.</span>
+            <span class="en hidden">Bulk ordering facilities for wholesale customers and tailored retail service.</span>
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>
+            <span class="mr">सोयीस्कर स्थान</span>
+            <span class="en hidden">Convenient Location</span>
+          </h3>
+          <p>
+            <span class="mr">तेजेवाडी व परिसरातील ग्राहकांसाठी सहज प्रवेशयोग्य मध्यवर्ती स्थान.</span>
+            <span class="en hidden">Centrally located in Tejewadi, easily accessible for all nearby areas.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <span class="mr">कॅटलॉग</span>
+          <span class="en hidden">Catalog</span>
+        </span>
+        <h2>
+          <span class="mr">आमची उत्पादने</span>
+          <span class="en hidden">Our Product Range</span>
+        </h2>
+        <p class="section-sub">
+          <span class="mr">घरासाठी आणि व्यवसायासाठी लागणारा संपूर्ण किराणा माल</span>
+          <span class="en hidden">Complete selection of groceries for home and business needs</span>
+        </p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- 1. Grains & Pulses -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(4)" title="मोठा फोटो पहा / View full image">
+            <img src="images/grains&amp;pulses.png" alt="धान्य आणि डाळी / Grains & Pulses" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">धान्य व कडधान्ये</span>
+              <span class="en hidden">Grains &amp; Pulses</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(4)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9z"/><path d="M12 2v18"/><path d="M8 8c1.5 2 4 2 4 2"/><path d="M16 8c-1.5 2-4 2-4 2"/><path d="M8 14c1.5 2 4 2 4 2"/><path d="M16 14c-1.5 2-4 2-4 2"/></svg>
+              </div>
+              <h3>
+                <span class="mr">धान्य आणि डाळी</span>
+                <span class="en hidden">Grains &amp; Pulses</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">मांजे हूळगे, गावरान मटकी</span><span class="en hidden">Manje Hulge, Gavran Matki</span></li>
+              <li><span class="mr">सर्व प्रकारची दर्जेदार कडधान्ये</span><span class="en hidden">All varieties of fresh legumes</span></li>
+              <li><span class="mr">तांदूळ, गहू, ज्वारी, बाजरी</span><span class="en hidden">Rice, Wheat, Jowar, Bajra</span></li>
+              <li><span class="mr">विविध प्रकारच्या डाळी</span><span class="en hidden">Variety of pulses (Toor, Moong, Chana)</span></li>
+              <li><span class="mr">इतर भुसार माल</span><span class="en hidden">Other cereals &amp; grains</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Edible Oils & Ghee -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(5)" title="मोठा फोटो पहा / View full image">
+            <img src="images/CookingOils&amp;Ghee.png" alt="तेल आणि तूप / Edible Oils & Ghee" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">खाद्यतेल व तूप</span>
+              <span class="en hidden">Edible Oils &amp; Ghee</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(5)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <h3>
+                <span class="mr">तेल आणि तूप</span>
+                <span class="en hidden">Edible Oils &amp; Ghee</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">विविध प्रकारचे खाद्यतेल</span><span class="en hidden">Variety of edible cooking oils</span></li>
+              <li><span class="mr">सोयाबीन तेल</span><span class="en hidden">Soybean Oil</span></li>
+              <li><span class="mr">शेंगदाणा तेल</span><span class="en hidden">Groundnut Oil</span></li>
+              <li><span class="mr">सूर्यफूल तेल</span><span class="en hidden">Sunflower Oil</span></li>
+              <li><span class="mr">दर्जेदार गावठी तूप</span><span class="en hidden">Pure Desi Cow Ghee</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Spices & Dry Fruits -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(6)" title="मोठा फोटो पहा / View full image">
+            <img src="images/Spices &amp; Dry Fruits.png" alt="मसाले आणि ड्रायफ्रूट्स / Spices & Dry Fruits" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">मसाले व ड्रायफ्रूट्स</span>
+              <span class="en hidden">Spices &amp; Dry Fruits</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(6)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>
+                <span class="mr">मसाले आणि ड्रायफ्रूट्स</span>
+                <span class="en hidden">Spices &amp; Dry Fruits</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">हळद, मिरची पावडर</span><span class="en hidden">Turmeric &amp; Chilli Powder</span></li>
+              <li><span class="mr">घरगुती गरम मसाला</span><span class="en hidden">Garam Masala blend</span></li>
+              <li><span class="mr">विविध खडे व पिठी मसाले</span><span class="en hidden">Whole and ground spices</span></li>
+              <li><span class="mr">काजू, बदाम व इतर ड्रायफ्रूट्स</span><span class="en hidden">Cashews, Almonds &amp; Dry Fruits</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Tea, Coffee & Breakfast -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(7)" title="मोठा फोटो पहा / View full image">
+            <img src="images/Tea, Coffee &amp; Breakfas.png" alt="चहा, कॉफी आणि नाश्ता / Tea, Coffee & Breakfast" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">चहा, कॉफी व नाश्ता</span>
+              <span class="en hidden">Tea &amp; Breakfast</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(7)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <h3>
+                <span class="mr">चहा, कॉफी आणि नाश्ता</span>
+                <span class="en hidden">Tea, Coffee &amp; Breakfast</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">प्रीमियम चहा आणि कॉफी</span><span class="en hidden">Tea &amp; Coffee brands</span></li>
+              <li><span class="mr">बिस्किटे आणि बेकरी उत्पादने</span><span class="en hidden">Biscuits &amp; Bakery items</span></li>
+              <li><span class="mr">पोहे, रवा, साबुदाणा</span><span class="en hidden">Poha, Rava, Sabudana</span></li>
+              <li><span class="mr">वरई व उपवासाचे पदार्थ</span><span class="en hidden">Varai &amp; Fasting food items</span></li>
+              <li><span class="mr">इतर त्वरित नाश्त्याचे पदार्थ</span><span class="en hidden">Instant breakfast products</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Milk & Dairy Products -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(8)" title="मोठा फोटो पहा / View full image">
+            <img src="images/Dairy &amp; Milk.png" alt="दूध आणि दुग्धजन्य पदार्थ / Milk & Dairy Products" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">दूध व दुग्धजन्य</span>
+              <span class="en hidden">Dairy Products</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(8)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v4H8z"/><path d="M6 6h12l2 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10l2-4z"/><line x1="4" y1="14" x2="20" y2="14"/></svg>
+              </div>
+              <h3>
+                <span class="mr">दूध आणि दुग्धजन्य पदार्थ</span>
+                <span class="en hidden">Milk &amp; Dairy Products</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">ताजे दूध</span><span class="en hidden">Fresh Milk</span></li>
+              <li><span class="mr">मऊ पनीर</span><span class="en hidden">Fresh Paneer</span></li>
+              <li><span class="mr">श्रीखंड आणि बासुंदी</span><span class="en hidden">Shrikhand &amp; Sweets</span></li>
+              <li><span class="mr">आईस्क्रीम</span><span class="en hidden">Ice Cream varieties</span></li>
+              <li><span class="mr">इतर दर्जेदार दुग्धजन्य पदार्थ</span><span class="en hidden">Assorted dairy essentials</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. Cold Beverages & Daily Needs -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(9)" title="मोठा फोटो पहा / View full image">
+            <img src="images/Cold Drinks &amp; Beverages.png" alt="थंड पेये आणि दैनंदिन वस्तू / Cold Beverages & Daily Needs" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">थंड पेये व ज्यूस</span>
+              <span class="en hidden">Cold Beverages</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(9)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14l-2 18H7L5 2z"/><line x1="4" y1="6" x2="20" y2="6"/></svg>
+              </div>
+              <h3>
+                <span class="mr">थंड पेये आणि दैनंदिन वस्तू</span>
+                <span class="en hidden">Cold Beverages &amp; Daily Needs</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">विविध ब्रँड्सची थंड पेये</span><span class="en hidden">Chilled Cold Drinks &amp; Juices</span></li>
+              <li><span class="mr">मिनरल वॉटर</span><span class="en hidden">Packaged Drinking Water</span></li>
+              <li><span class="mr">रोजच्या गरजेच्या विविध वस्तू</span><span class="en hidden">Everyday General Store Goods</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. Home Cleaning & Hygiene -->
+        <div class="product-card">
+          <div class="product-img-wrapper" onclick="openProductLightbox(10)" title="मोठा फोटो पहा / View full image">
+            <img src="images/Home Cleaning &amp; Hygiene.png" alt="घरगुती स्वच्छता साहित्य / Home Cleaning & Hygiene" class="product-card-img" loading="lazy" />
+            <span class="product-badge">
+              <span class="mr">स्वच्छता व डिटर्जंट्स</span>
+              <span class="en hidden">Cleaning &amp; Hygiene</span>
+            </span>
+            <button class="product-zoom-btn" aria-label="Zoom image" onclick="event.stopPropagation(); openProductLightbox(10)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </button>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-header">
+              <div class="product-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
+              </div>
+              <h3>
+                <span class="mr">घरगुती स्वच्छता साहित्य</span>
+                <span class="en hidden">Home Cleaning &amp; Hygiene</span>
+              </h3>
+            </div>
+            <ul>
+              <li><span class="mr">कपडे धुण्याचे साबण व बार</span><span class="en hidden">Laundry Soaps &amp; Bars</span></li>
+              <li><span class="mr">डिटर्जंट पावडर व लिक्विड</span><span class="en hidden">Detergent Powders &amp; Liquids</span></li>
+              <li><span class="mr">फ्लोअर आणि टॉयलेट क्लीनर</span><span class="en hidden">Floor &amp; Surface Cleaners</span></li>
+              <li><span class="mr">इतर स्वच्छता साहित्य</span><span class="en hidden">Other Hygiene &amp; Sanitizing Goods</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="section-cta-wrap">
+        <a href="products.html" class="btn-view-all">
+          <span class="mr">सर्व उत्पादने व सविस्तर माहिती पहा</span>
+          <span class="en hidden">View All Products &amp; Details</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">
+          <span class="mr">गॅलरी</span>
+          <span class="en hidden">Gallery</span>
+        </span>
+        <h2>
+          <span class="mr">आमच्या दुकानाचे फोटो</span>
+          <span class="en hidden">Store Photo Gallery</span>
+        </h2>
+        <p class="section-sub">
+          <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्सचे प्रत्यक्ष दृश्य</span>
+          <span class="en hidden">Real photographs from Shraddha Kirana &amp; General Stores</span>
+        </p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="gallery-filter-tabs">
+        <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">
+          <span class="mr">सर्व फोटो (११)</span>
+          <span class="en hidden">All Photos (11)</span>
+        </button>
+        <button class="gallery-filter-btn" onclick="filterGallery('store', this)">
+          <span class="mr">दुकान परिसर (४)</span>
+          <span class="en hidden">Store Views (4)</span>
+        </button>
+        <button class="gallery-filter-btn" onclick="filterGallery('product', this)">
+          <span class="mr">उत्पादने व माल (७)</span>
+          <span class="en hidden">Product Shelves (7)</span>
+        </button>
+      </div>
+
+      <!-- Main featured image -->
+      <div class="gallery-featured" onclick="openLightbox()">
+        <img
+          src="images/shop1.jpg"
+          alt="श्रद्धा किराणा - दुकानाचे मुख्य प्रवेशद्वार"
+          class="gallery-main-img"
+          id="galleryMain"
+        />
+        <div class="gallery-zoom-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          <span class="mr">मोठा फोटो पहा</span>
+          <span class="en hidden">View Full Size</span>
+        </div>
+        <div class="gallery-featured-label" id="galleryFeaturedLabel">
+          <span class="mr">दुकानाचे मुख्य प्रवेशद्वार</span>
+          <span class="en hidden">Main Store Entrance</span>
+        </div>
+      </div>
+
+      <!-- Thumbnail strip (All 11 Photos) -->
+      <div class="gallery-thumbs" id="galleryThumbs">
+        <!-- Store Photos -->
+        <div class="gallery-thumb active" data-cat="store" data-index="0" onclick="showGalleryImage(0, this)">
+          <img src="images/shop1.jpg" alt="Shop Front" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">प्रवेशद्वार</span>
+            <span class="en hidden">Store Front</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="store" data-index="1" onclick="showGalleryImage(1, this)">
+          <img src="images/shop2.jpg" alt="Inside View 1" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">किराणा शेल्फ १</span>
+            <span class="en hidden">Shelves 1</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="store" data-index="2" onclick="showGalleryImage(2, this)">
+          <img src="images/shop3.jpg" alt="Inside View 2" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">काउंटर व माल</span>
+            <span class="en hidden">Counter</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="store" data-index="3" onclick="showGalleryImage(3, this)">
+          <img src="images/shop4.jpg" alt="Grand Opening" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">उद्घाटन सोहळा</span>
+            <span class="en hidden">Inauguration</span>
+          </span>
+        </div>
+
+        <!-- Product Category Photos -->
+        <div class="gallery-thumb" data-cat="product" data-index="4" onclick="showGalleryImage(4, this)">
+          <img src="images/grains&amp;pulses.png" alt="धान्य आणि डाळी" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">धान्य व डाळी</span>
+            <span class="en hidden">Grains &amp; Pulses</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="5" onclick="showGalleryImage(5, this)">
+          <img src="images/CookingOils&amp;Ghee.png" alt="तेल आणि तूप" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">खाद्यतेल व तूप</span>
+            <span class="en hidden">Oils &amp; Ghee</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="6" onclick="showGalleryImage(6, this)">
+          <img src="images/Spices &amp; Dry Fruits.png" alt="मसाले आणि ड्रायफ्रूट्स" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">मसाले व ड्रायफ्रूट्स</span>
+            <span class="en hidden">Spices</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="7" onclick="showGalleryImage(7, this)">
+          <img src="images/Tea, Coffee &amp; Breakfas.png" alt="चहा आणि कॉफी" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">चहा व नाश्ता</span>
+            <span class="en hidden">Tea &amp; Snacks</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="8" onclick="showGalleryImage(8, this)">
+          <img src="images/Dairy &amp; Milk.png" alt="दूध व दुग्धजन्य" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">दुग्धजन्य पदार्थ</span>
+            <span class="en hidden">Dairy Items</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="9" onclick="showGalleryImage(9, this)">
+          <img src="images/Cold Drinks &amp; Beverages.png" alt="थंड पेये" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">थंड पेये व ज्यूस</span>
+            <span class="en hidden">Beverages</span>
+          </span>
+        </div>
+        <div class="gallery-thumb" data-cat="product" data-index="10" onclick="showGalleryImage(10, this)">
+          <img src="images/Home Cleaning &amp; Hygiene.png" alt="स्वच्छता साहित्य" loading="lazy" />
+          <span class="thumb-label">
+            <span class="mr">स्वच्छता साहित्य</span>
+            <span class="en hidden">Cleaning Goods</span>
+          </span>
+        </div>
+      </div>
+      <div class="section-cta-wrap">
+        <a href="gallery.html" class="btn-view-all">
+          <span class="mr">संपूर्ण फोटो गॅलरी पहा</span>
+          <span class="en hidden">Explore Full Photo Gallery</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox(event)" aria-label="Close Lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button class="lb-prev" onclick="lbNav(event,-1)" aria-label="Previous">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img src="" alt="" id="lbImg" class="lb-img" onclick="event.stopPropagation()" />
+    <button class="lb-next" onclick="lbNav(event,1)" aria-label="Next">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <p class="lb-caption" id="lbCaption" onclick="event.stopPropagation()"></p>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-badge">
+            <span class="mr">ओळख</span>
+            <span class="en hidden">Our Story</span>
+          </span>
+          <h2>
+            <span class="mr">आमच्याबद्दल</span>
+            <span class="en hidden">About Us</span>
+          </h2>
+          <p>
+            <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्समध्ये आपले मनःपूर्वक स्वागत! तेजेवाडी आणि परिसरातील ग्राहकांसाठी रोजच्या गरजेच्या किराणा व भुसार मालासाठी विश्वासाचे ठिकाण म्हणून आम्ही सेवा देत आहोत.</span>
+            <span class="en hidden">Welcome to Shraddha Kirana &amp; General Stores! We have been proudly serving the residents of Tejewadi and surrounding areas as a trusted, reliable destination for groceries and household daily needs.</span>
+          </p>
+          <p>
+            <span class="mr">ग्राहकांना दर्जेदार माल, योग्य दर आणि विश्वासू सेवा देण्याला आमचे नेहमीच प्राधान्य आहे. घरचा किराणा असो, मोठ्या प्रमाणातील भुसार माल असो किंवा रोजच्या गरजेच्या वस्तू असोत — आपल्या गरजेच्या अनेक वस्तू एकाच छताखाली उपलब्ध करून देण्याचा आमचा सातत्यपूर्ण प्रयत्न असतो.</span>
+            <span class="en hidden">We always prioritize quality products, competitive pricing, and honest service. Whether it is monthly household provisions, bulk grain supplies, or daily items — our commitment is to provide everything under one roof.</span>
+          </p>
+          <div class="quote-box">
+            <p class="quote-text">
+              <span class="mr">"ग्राहकांचा विश्वास हीच आमची खरी कमाई आहे."</span>
+              <span class="en hidden">"Customer trust is our true earning."</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="why-choose">
+          <h3>
+            <span class="mr">श्रद्धा किराणा — का निवडाल?</span>
+            <span class="en hidden">Why Choose Shraddha Kirana?</span>
+          </h3>
+          <ul class="why-list">
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">दर्जेदार आणि स्वच्छ माल</span><span class="en hidden">Quality and clean grocery items</span></span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">योग्य आणि वाजवी बाजारभाव</span><span class="en hidden">Fair and competitive market pricing</span></span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">होलसेल व किरकोळ विक्री दोन्ही उपलब्ध</span><span class="en hidden">Both wholesale and retail sales available</span></span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">रोजच्या गरजेच्या वस्तूंची त्वरित उपलब्धता</span><span class="en hidden">Instant availability of daily essentials</span></span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">ग्राहकांशी आपुलकीचे आणि विश्वासाचे नाते</span><span class="en hidden">Warm, transparent relationships with customers</span></span>
+            </li>
+            <li>
+              <span class="check-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span><span class="mr">परिसरातील ग्राहकांसाठी सोयीचे खरेदी केंद्र</span><span class="en hidden">Convenient, central shopping location</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-cta-wrap">
+        <a href="about.html" class="btn-view-all">
+          <span class="mr">आमच्याबद्दल अधिक सविस्तर वाचा</span>
+          <span class="en hidden">Read Full Store Story &amp; Details</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge section-badge-light">
+          <span class="mr">संपर्क व पत्ता</span>
+          <span class="en hidden">Contact &amp; Location</span>
+        </span>
+        <h2>
+          <span class="mr">संपर्क करा आणि भेट द्या</span>
+          <span class="en hidden">Get In Touch &amp; Visit Us</span>
+        </h2>
+        <p class="section-sub">
+          <span class="mr">आपल्या रोजच्या किराण्यासाठी आजच दुकानाला भेट द्या अथवा थेट संपर्क साधा!</span>
+          <span class="en hidden">Visit our store today or reach out directly for your grocery and bulk grain requirements!</span>
+        </p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- Left Column: Store Details & Actions -->
+        <div class="contact-info-col">
+
+          <!-- Store & Owner Profile Card -->
+          <div class="contact-profile-card">
+            <div class="profile-header">
+              <div class="profile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div class="profile-details">
+                <span class="profile-sub">
+                  <span class="mr">किराणा व भुसार मालाचे विक्रेते</span>
+                  <span class="en hidden">Wholesale &amp; Retail Groceries</span>
+                </span>
+                <h3 class="profile-title">
+                  <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्स</span>
+                  <span class="en hidden">Shraddha Kirana &amp; General Stores</span>
+                </h3>
+              </div>
+            </div>
+
+            <div class="profile-meta">
+              <div class="meta-item">
+                <span class="meta-label">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <span class="mr">मालक / संचालक:</span>
+                  <span class="en hidden">Proprietor:</span>
+                </span>
+                <span class="meta-value">Ramkrishna Dhomse <small class="mr">(रामकृष्ण धोमसे)</small></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <span class="mr">वेळ:</span>
+                  <span class="en hidden">Hours:</span>
+                </span>
+                <span class="meta-value">
+                  <span class="mr">सकाळी ७:०० ते रात्री ९:३० (दररोज)</span>
+                  <span class="en hidden">7:00 AM - 9:30 PM (Everyday)</span>
+                </span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                  <span class="mr">विक्री प्रकार:</span>
+                  <span class="en hidden">Sales:</span>
+                </span>
+                <span class="meta-value">
+                  <span class="mr">होलसेल व किरकोळ किराणा</span>
+                  <span class="en hidden">Wholesale &amp; Retail</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="contact-action-boxes">
+            <a href="tel:+919860562222" class="action-box phone-box">
+              <div class="action-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="action-info">
+                <span class="action-label">
+                  <span class="mr">थेट फोन करा</span>
+                  <span class="en hidden">Call Us Directly</span>
+                </span>
+                <span class="action-val">+91 98605 62222</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/919860562222" target="_blank" rel="noopener" class="action-box whatsapp-box">
+              <div class="action-icon wa-color">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div class="action-info">
+                <span class="action-label">
+                  <span class="mr">WhatsApp संदेश</span>
+                  <span class="en hidden">WhatsApp Chat</span>
+                </span>
+                <span class="action-val">9860562222</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Address & Email Cards -->
+          <div class="contact-details-list">
+            <div class="detail-card">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>
+                  <span class="mr">दुकान पत्ता</span>
+                  <span class="en hidden">Store Address</span>
+                </h4>
+                <p>
+                  <span class="mr">मु. पो. तेजेवाडी, तालुका जुन्नर, जिल्हा पुणे, महाराष्ट्र - ४१०५०२</span>
+                  <span class="en hidden">At Post Tejewadi, Taluka Junnar, District Pune, Maharashtra - 410502</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>
+                  <span class="mr">अधिकृत ईमेल</span>
+                  <span class="en hidden">Official Email</span>
+                </h4>
+                <a href="mailto:dhomseramkrishna@gmail.com" class="email-link">dhomseramkrishna@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Embedded Google Map -->
+        <div class="contact-map-col">
+          <div class="map-card">
+            <div class="map-header">
+              <div class="map-header-left">
+                <span class="map-live-dot"></span>
+                <span class="map-header-title">
+                  <span class="mr">Google Map थेट स्थान</span>
+                  <span class="en hidden">Live Map Location</span>
+                </span>
+              </div>
+              <span class="map-location-tag">
+                <span class="mr">तेजेवाडी, जुन्नर</span>
+                <span class="en hidden">Tejewadi, Junnar</span>
+              </span>
+            </div>
+
+            <div class="map-iframe-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.4500228116917!2d73.9284478!3d19.2014941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd3e7470b7e023%3A0x1538f74f72db0770!2sShraddha%20Kirana%20%26%20General%20Stores!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Map location of Shraddha Kirana &amp; General Stores, Tejewadi, Junnar"
+              ></iframe>
+            </div>
+
+            <div class="map-footer">
+              <div class="map-address-snippet">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>
+                  <span class="mr">तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+                  <span class="en hidden">Tejewadi, Taluka Junnar, Pune</span>
+                </span>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7"
+                target="_blank"
+                rel="noopener"
+                class="btn-get-directions"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span class="mr">मार्ग / Directions</span>
+                <span class="en hidden">Directions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Col 1: Store Intro -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand-header">
+            <span class="footer-logo-badge footer-logo-img">
+              <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="64" width="64" style="object-fit:contain;border-radius:8px;">
+            </span>
+            <h3>
+              <span class="mr">श्रद्धा किराणा</span>
+              <span class="en hidden">Shraddha Kirana</span>
+            </h3>
+          </div>
+          <p class="footer-desc">
+            <span class="mr">आपल्या विश्वासाचं आणि रोजच्या गरजेच्या वस्तू एकाच छताखाली मिळण्याचे जुन्नर तालुक्यातील हक्काचे किराणा दुकान!</span>
+            <span class="en hidden">Your trusted destination for everyday groceries and bulk grain essentials in Junnar!</span>
+          </p>
+          <div class="footer-owner-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>
+              <span class="mr">संचालक: रामकृष्ण धोमसे</span>
+              <span class="en hidden">Proprietor: Ramkrishna Dhomse</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">जलद दुवे</span>
+            <span class="en hidden">Quick Links</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="index.html"><span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span></a></li>
+            <li><a href="products.html"><span class="mr">आमची उत्पादने</span><span class="en hidden">Products</span></a></li>
+            <li><a href="gallery.html"><span class="mr">दुकान फोटो गॅलरी</span><span class="en hidden">Photo Gallery</span></a></li>
+            <li><a href="about.html"><span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span></a></li>
+            <li><a href="contact.html"><span class="mr">संपर्क व पत्ता</span><span class="en hidden">Contact Store</span></a></li>
+            <li><a href="terms.html"><span class="mr">अटी व शर्ती</span><span class="en hidden">Terms &amp; Conditions</span></a></li>
+            <li><a href="privacy.html"><span class="mr">गोपनीयता धोरण</span><span class="en hidden">Privacy Policy</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products Highlight -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">उत्पादन विभाग</span>
+            <span class="en hidden">Categories</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="products.html"><span class="mr">धान्य आणि कडधान्ये</span><span class="en hidden">Grains &amp; Pulses</span></a></li>
+            <li><a href="products.html"><span class="mr">खाद्यतेल आणि गावठी तूप</span><span class="en hidden">Oils &amp; Pure Ghee</span></a></li>
+            <li><a href="products.html"><span class="mr">मसाले आणि ड्रायफ्रूट्स</span><span class="en hidden">Spices &amp; Dry Fruits</span></a></li>
+            <li><a href="products.html"><span class="mr">चहा, कॉफी व नाश्ता</span><span class="en hidden">Tea &amp; Breakfast</span></a></li>
+            <li><a href="products.html"><span class="mr">दूध व दुग्धजन्य पदार्थ</span><span class="en hidden">Milk &amp; Dairy</span></a></li>
+            <li><a href="products.html"><span class="mr">स्वच्छता साहित्य</span><span class="en hidden">Cleaning Products</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Contact & Timing -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">संपर्क व वेळ</span>
+            <span class="en hidden">Contact &amp; Hours</span>
+          </h4>
+          <ul class="footer-contact-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919860562222">+91 98605 62222</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:dhomseramkrishna@gmail.com">dhomseramkrishna@gmail.com</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7" target="_blank" rel="noopener" title="Google Maps Store Location">
+                <span class="mr">तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+                <span class="en hidden">Tejewadi, Junnar, Pune</span>
+              </a>
+            </li>
+            <li class="footer-timing-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>
+                <span class="mr">सकाळी ७:०० ते रात्री ९:३० (दररोज)</span>
+                <span class="en hidden">7:00 AM - 9:30 PM (Daily)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          <span class="mr">&copy; 2026 श्रद्धा किराणा आणि जनरल स्टोअर्स. सर्व हक्क राखीव.</span>
+          <span class="en hidden">&copy; 2026 Shraddha Kirana &amp; General Stores. All rights reserved.</span>
+        </p>
+        <span class="footer-bottom-divider">|</span>
+        <p class="footer-developer">
+          <span class="mr">डिझाइन व विकसित:&nbsp;</span>
+          <span class="en hidden">Designed &amp; Developed by&nbsp;</span>
+          <a href="https://textorasms.com" target="_blank" rel="noopener" class="footer-dev-logo-link" title="Textora Technologies">
+            <img src="images/textora-logo-white.png" alt="Textora Technologies" class="footer-dev-logo" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/919860562222" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

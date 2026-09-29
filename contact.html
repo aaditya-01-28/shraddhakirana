@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="संपर्क व पत्ता - श्रद्धा किराणा आणि जनरल स्टोअर्स, तेजेवाडी, ता. जुन्नर, जि. पुणे. फोन: 9860562222. ईमेल: dhomseramkrishna@gmail.com." />
+  <title>संपर्क व पत्ता | Contact Us — श्रद्धा किराणा आणि जनरल स्टोअर्स</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== FIXED NAVBAR ===== -->
+  <header class="navbar fixed-navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon brand-logo-img">
+          <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="46" width="46" style="object-fit:contain;border-radius:6px;">
+        </span>
+        <span class="brand-text">
+          <span class="mr">श्रद्धा किराणा</span>
+          <span class="en hidden">Shraddha Kirana</span>
+        </span>
+      </a>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" onclick="closeMenu()">
+            <span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span>
+          </a></li>
+          <li><a href="products.html" onclick="closeMenu()">
+            <span class="mr">उत्पादने</span><span class="en hidden">Products</span>
+          </a></li>
+          <li><a href="gallery.html" onclick="closeMenu()">
+            <span class="mr">गॅलरी</span><span class="en hidden">Gallery</span>
+          </a></li>
+          <li><a href="about.html" onclick="closeMenu()">
+            <span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span>
+          </a></li>
+          <li><a href="contact.html" class="active-page nav-cta" onclick="closeMenu()">
+            <span class="mr">संपर्क</span><span class="en hidden">Contact</span>
+          </a></li>
+        </ul>
+
+        <!-- Language Switcher in Navbar -->
+        <div class="nav-lang">
+          <button class="lang-btn active" id="btn-mr" onclick="setLang('mr')">मराठी</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO BANNER ===== -->
+  <section class="page-banner">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span></a>
+        <span>&rsaquo;</span>
+        <span><span class="mr">संपर्क व पत्ता</span><span class="en hidden">Contact &amp; Location</span></span>
+      </nav>
+      <div class="page-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="mr">थेट संपर्क व भेट</span>
+        <span class="en hidden">Contact &amp; Directions</span>
+      </div>
+      <h1 class="page-banner-title">
+        <span class="mr">संपर्क करा आणि दुकानाला भेट द्या</span>
+        <span class="en hidden">Get In Touch &amp; Visit Our Store</span>
+      </h1>
+      <p class="page-banner-desc">
+        <span class="mr">किराणा खरेदी, मोठ्या प्रमाणातील भुसार मालाची ऑर्डर किंवा दरांच्या चौकशीसाठी आजच थेट संपर्क साधा अथवा तेजेवाडी येथील दुकानात भेट द्या!</span>
+        <span class="en hidden">Reach out for your monthly grocery supplies, wholesale bulk sacks, or visit our store in Tejewadi, Junnar, Pune.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT MAIN SECTION ===== -->
+  <main class="section contact-page-section">
+    <div class="container">
+
+      <!-- 4 Quick Contact Action Cards -->
+      <div class="contact-action-boxes">
+        <a href="tel:+919860562222" class="action-box">
+          <div class="action-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.4 11.4 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+          </div>
+          <div class="action-info">
+            <span class="action-label"><span class="mr">थेट कॉल करा</span><span class="en hidden">Call Directly</span></span>
+            <span class="action-val">+91 98605 62222</span>
+          </div>
+        </a>
+
+        <a href="https://wa.me/919860562222?text=नमस्कार,%20मी%20श्रद्धा%20किराणाकडून%20माहिती%20घेऊ%20इच्छितो" target="_blank" rel="noopener" class="action-box action-box-wa">
+          <div class="action-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div class="action-info">
+            <span class="action-label"><span class="mr">व्हॉट्सअॅप मेसेज</span><span class="en hidden">WhatsApp Us</span></span>
+            <span class="action-val">98605 62222</span>
+          </div>
+        </a>
+
+        <a href="mailto:dhomseramkrishna@gmail.com" class="action-box">
+          <div class="action-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="action-info">
+            <span class="action-label"><span class="mr">ईमेल पाठवा</span><span class="en hidden">Email Store</span></span>
+            <span class="action-val">dhomseramkrishna@gmail.com</span>
+          </div>
+        </a>
+
+        <div class="action-box" style="cursor: default;">
+          <div class="action-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="action-info">
+            <span class="action-label"><span class="mr">दुकान उघडे असण्याची वेळ</span><span class="en hidden">Working Hours</span></span>
+            <span class="action-val"><span class="mr">सकाळी ७:०० ते रात्री ९:३० (दररोज)</span><span class="en hidden">7 AM - 9:30 PM (Daily)</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout: Store Details + Map -->
+      <div class="contact-layout">
+
+        <!-- Left: Address & Store Information -->
+        <div class="contact-info-col">
+          <div class="contact-profile-card">
+            <div class="profile-header">
+              <div class="profile-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div class="profile-details">
+                <span class="profile-sub">
+                  <span class="mr">किराणा व भुसार मालाचे विक्रेते</span>
+                  <span class="en hidden">Wholesale &amp; Retail Groceries</span>
+                </span>
+                <h3 class="profile-name">
+                  <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्स</span>
+                  <span class="en hidden">Shraddha Kirana &amp; General Stores</span>
+                </h3>
+              </div>
+            </div>
+
+            <div class="profile-owner-tag">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>
+                <span class="mr">संचालक: रामकृष्ण धोमसे (Ramkrishna Dhomse)</span>
+                <span class="en hidden">Proprietor: Ramkrishna Dhomse</span>
+              </span>
+            </div>
+
+            <p class="profile-desc">
+              <span class="mr">आपल्या विश्वासाचं आणि रोजच्या गरजेच्या वस्तू एकाच छताखाली मिळण्याचे ठिकाण! उत्तम दर्जाचा माल, योग्य दर आणि विश्वासू सेवा हेच आमचे वैशिष्ट्य.</span>
+              <span class="en hidden">Your trusted destination for all everyday grocery essentials and wholesale food grains in Junnar taluka under one roof.</span>
+            </p>
+          </div>
+
+          <!-- Address Detailed Card -->
+          <div class="contact-details-card">
+            <div class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-row-text">
+                <span class="row-label"><span class="mr">संपूर्ण पत्ता</span><span class="en hidden">Store Address</span></span>
+                <p class="row-val">
+                  <span class="mr">मु. पो. तेजेवाडी, तालुका जुन्नर, जिल्हा पुणे, महाराष्ट्र</span>
+                  <span class="en hidden">At Post Tejewadi, Taluka Junnar, District Pune, Maharashtra</span>
+                </p>
+                <a href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: var(--green); margin-top: 6px; font-weight: 700; text-decoration: underline;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  <span class="mr">नकाशावर स्थान उघडा</span>
+                  <span class="en hidden">Open Store Location</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <div class="contact-row-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-row-text">
+                <span class="row-label"><span class="mr">कामाचे तास</span><span class="en hidden">Store Timings</span></span>
+                <p class="row-val">
+                  <span class="mr">सकाळी ७:०० ते रात्री ९:३० (आठवड्याचे सर्व ७ दिवस)</span>
+                  <span class="en hidden">7:00 AM – 9:30 PM (All 7 Days Open)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Google Map -->
+        <div class="map-card">
+          <div class="map-card-header">
+            <div class="map-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+              <span class="mr">थेट Google नकाशा</span>
+              <span class="en hidden">Live Google Maps</span>
+            </div>
+            <a href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7" target="_blank" rel="noopener" class="map-external-link">
+              <span class="mr">मोठ्या नकाशावर उघडा</span>
+              <span class="en hidden">Open in Google Maps</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+
+          <div class="map-iframe-container" style="min-height: 400px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.4500228116917!2d73.9284478!3d19.2014941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd3e7470b7e023%3A0x1538f74f72db0770!2sShraddha%20Kirana%20%26%20General%20Stores!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border:0; min-height: 400px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Shraddha Kirana &amp; General Stores Location Map"
+            ></iframe>
+          </div>
+
+          <div class="map-card-footer">
+            <span class="map-pin-pulse"></span>
+            <span>
+              <span class="mr">श्रद्धा किराणा आणि जनरल स्टोअर्स, तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+              <span class="en hidden">Shraddha Kirana &amp; General Stores, Tejewadi, Junnar, Pune</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Directions Guide Section -->
+      <div class="section-header">
+        <span class="section-badge">
+          <span class="mr">कसे यावे?</span>
+          <span class="en hidden">Route Guide</span>
+        </span>
+        <h2>
+          <span class="mr">दुकानापर्यंत पोहोचण्याचे मार्ग</span>
+          <span class="en hidden">How To Reach Our Store</span>
+        </h2>
+      </div>
+
+      <div class="directions-grid">
+        <div class="direction-card">
+          <h4>
+            <span class="mr">जुन्नर शहरातून</span>
+            <span class="en hidden">From Junnar City</span>
+          </h4>
+          <p>
+            <span class="mr">जुन्नर शहरातून तेजेवाडी साधारण ८ ते १० किलोमीटर अंतरावर आहे. जुन्नर-वडज मार्गे सहज पोहोचता येते. रिक्षा व एसटी सेवा उपलब्ध आहे.</span>
+            <span class="en hidden">Approx. 8-10 km from Junnar city center via the Junnar-Wadaj route. Local auto rickshaws and ST buses are available.</span>
+          </p>
+        </div>
+
+        <div class="direction-card">
+          <h4>
+            <span class="mr">नारायणगावकडून</span>
+            <span class="en hidden">From Narayangaon</span>
+          </h4>
+          <p>
+            <span class="mr">पुणे-नाशिक महामार्गावरील नारायणगावकडून जुन्नर मार्गे तेजेवाडीकडे प्रवास सोयीस्कर आहे. स्वतःच्या वाहनाने साधारण २५-३० मिनिटांचा प्रवास आहे.</span>
+            <span class="en hidden">From Narayangaon on Pune-Nashik Highway, travel towards Junnar and proceed to Tejewadi (approx. 25-30 mins drive).</span>
+          </p>
+        </div>
+
+        <div class="direction-card">
+          <h4>
+            <span class="mr">आळेफाटा / ओतूरकडून</span>
+            <span class="en hidden">From Alephata / Otur</span>
+          </h4>
+          <p>
+            <span class="mr">आळेफाटा किंवा ओतूर बाजूने येणाऱ्या ग्राहकांसाठी कल्याण-नगर महामार्ग अथवा जुन्नर लिंक रोडने थेट तेजेवाडीला येता येते.</span>
+            <span class="en hidden">Accessible via the Otur-Junnar link routes for customers visiting from north Junnar and surrounding villages.</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <!-- Col 1: Store Brand Info -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            <span class="brand-icon footer-logo-img">
+              <img src="images/logo_badge.png" alt="Shraddha Kirana Logo" height="64" width="64" style="object-fit:contain;border-radius:8px;">
+            </span>
+            <h3>
+              <span class="mr">श्रद्धा किराणा</span>
+              <span class="en hidden">Shraddha Kirana</span>
+            </h3>
+          </div>
+          <p class="footer-desc">
+            <span class="mr">आपल्या विश्वासाचं आणि रोजच्या गरजेच्या वस्तू एकाच छताखाली मिळण्याचे जुन्नर तालुक्यातील हक्काचे किराणा दुकान!</span>
+            <span class="en hidden">Your trusted destination for everyday groceries and bulk grain essentials in Junnar!</span>
+          </p>
+          <div class="footer-owner-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>
+              <span class="mr">संचालक: रामकृष्ण धोमसे</span>
+              <span class="en hidden">Proprietor: Ramkrishna Dhomse</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">जलद दुवे</span>
+            <span class="en hidden">Quick Links</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="index.html"><span class="mr">मुख्यपृष्ठ</span><span class="en hidden">Home</span></a></li>
+            <li><a href="products.html"><span class="mr">आमची उत्पादने</span><span class="en hidden">Products</span></a></li>
+            <li><a href="gallery.html"><span class="mr">दुकान फोटो गॅलरी</span><span class="en hidden">Photo Gallery</span></a></li>
+            <li><a href="about.html"><span class="mr">आमच्याबद्दल</span><span class="en hidden">About Us</span></a></li>
+            <li><a href="contact.html"><span class="mr">संपर्क व पत्ता</span><span class="en hidden">Contact Store</span></a></li>
+            <li><a href="terms.html"><span class="mr">अटी व शर्ती</span><span class="en hidden">Terms &amp; Conditions</span></a></li>
+            <li><a href="privacy.html"><span class="mr">गोपनीयता धोरण</span><span class="en hidden">Privacy Policy</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Products Highlight -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">उत्पादन विभाग</span>
+            <span class="en hidden">Categories</span>
+          </h4>
+          <ul class="footer-menu">
+            <li><a href="products.html?cat=grains"><span class="mr">धान्य आणि कडधान्ये</span><span class="en hidden">Grains &amp; Pulses</span></a></li>
+            <li><a href="products.html?cat=oils"><span class="mr">खाद्यतेल आणि गावठी तूप</span><span class="en hidden">Oils &amp; Pure Ghee</span></a></li>
+            <li><a href="products.html?cat=spices"><span class="mr">मसाले आणि ड्रायफ्रूट्स</span><span class="en hidden">Spices &amp; Dry Fruits</span></a></li>
+            <li><a href="products.html?cat=breakfast"><span class="mr">चहा, कॉफी व नाश्ता</span><span class="en hidden">Tea &amp; Breakfast</span></a></li>
+            <li><a href="products.html?cat=dairy"><span class="mr">दूध व दुग्धजन्य पदार्थ</span><span class="en hidden">Milk &amp; Dairy</span></a></li>
+            <li><a href="products.html?cat=cleaning"><span class="mr">स्वच्छता साहित्य</span><span class="en hidden">Cleaning Products</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Store Contact & Timing -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="mr">संपर्क व वेळ</span>
+            <span class="en hidden">Contact &amp; Hours</span>
+          </h4>
+          <ul class="footer-contact-items">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+919860562222">+91 98605 62222</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:dhomseramkrishna@gmail.com">dhomseramkrishna@gmail.com</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.app.goo.gl/4jRTxDockXNkMkGW7" target="_blank" rel="noopener" title="Google Maps Store Location">
+                <span class="mr">तेजेवाडी, ता. जुन्नर, जि. पुणे</span>
+                <span class="en hidden">Tejewadi, Junnar, Pune</span>
+              </a>
+            </li>
+            <li class="footer-timing-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>
+                <span class="mr">सकाळी ७:०० ते रात्री ९:३० (दररोज)</span>
+                <span class="en hidden">7:00 AM - 9:30 PM (Daily)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          <span class="mr">&copy; 2026 श्रद्धा किराणा आणि जनरल स्टोअर्स. सर्व हक्क राखीव.</span>
+          <span class="en hidden">&copy; 2026 Shraddha Kirana &amp; General Stores. All rights reserved.</span>
+        </p>
+        <span class="footer-bottom-divider">|</span>
+        <p class="footer-developer">
+          <span class="mr">डिझाइन व विकसित:&nbsp;</span>
+          <span class="en hidden">Designed &amp; Developed by&nbsp;</span>
+          <a href="https://textorasms.com" target="_blank" rel="noopener" class="footer-dev-logo-link" title="Textora Technologies">
+            <img src="images/textora-logo-white.png" alt="Textora Technologies" class="footer-dev-logo" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/919860562222" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
